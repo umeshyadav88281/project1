@@ -1,0 +1,171 @@
+/* Global resets */
+*, *:before, *:after {
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* Base element styles */
+body, h1, h2, h3, h4, p, figure, figcaption {
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+
+body {
+  font-family: 'Times New Roman', serif; /* Sets the default font for the page */
+  line-height: 1.6; /* Sets the default line height */
+  color: #333; /* Sets the default text color */
+}
+
+/* Header styles */
+header {
+  color: rgb(238, 127, 35); /* Sets text color for header */
+  margin-bottom: -40px; /* Adjusts spacing below the header */
+  margin-top: 10px; /* Adjusts spacing above the header */
+  margin-left: 30px; /* Adjusts spacing to the left of the header */
+  text-align: left; /* Aligns text to the left */
+}
+
+header h4 {
+  color: rgb(238, 127, 35); /* Sets text color for h4 within the header */
+  margin-left: 90px; /* Adjusts left margin for better alignment */
+  text-align: left; /* Ensures text is aligned left */
+  font-size: 1.5em; /* Sets font size */
+}
+
+/* Main content layout styles */
+.main {
+  display: flex; /* Uses flexbox for layout */
+  flex-wrap: wrap; /* Allows flex items to wrap onto multiple lines */
+  margin: 20px 80px; /* Adds margin around the main content area */
+}
+
+.a {
+  flex: 3 1 50%; /* Flex grow, shrink and basis values */
+  order: 1; /* Controls the order of flex items */
+  margin-right: 25px; /* Right margin for spacing between columns */
+}
+
+.b {
+  flex: 1 1 400px; /* Flex basis with a minimum width of 400px */
+  order: 2; /* Controls the order of flex items */
+  margin-top: 100px; /* Top margin for alignment */
+}
+
+.a2 {
+  height: 700px; /* Fixed height */
+  width: 600px; /* Fixed width */
+}
+
+img {
+  height: 700px; /* Fixed height for images */
+  width: 600px; /* Fixed width for images */
+  margin: 20px 38px; /* Margin for alignment */
+}
+
+/* Content typography and spacing */
+.ah3 h1 {
+  font-size: 50px; /* Large font size for main heading */
+  color: #000; /* Black color for text */
+  margin: 2px 0; /* Compact vertical margin */
+  text-align: left; /* Aligns text to the left */
+  padding-left: 30px; /* Padding on the left for alignment */
+  max-width: 100%; /* Ensures h1 does not exceed its container width */
+}
+
+.a3 p {
+  text-align: center; /* Centers text within paragraph */
+  max-width: 90%; /* Limits width of paragraph to 90% of its container */
+  margin-left: 20px; /* Left margin for alignment */
+  padding: 0px 10px; /* Padding for text inside paragraph */
+  padding-bottom: 10px; /* Additional bottom padding */
+  font-size: 13px; /* Smaller font size for detailed text */
+}
+
+.a4a5 {
+  flex-direction: column; /* Stacks children vertically */
+  margin-left: 30px; /* Left margin for alignment */
+  -webkit-column-count: 2; /* Number of columns in modern browsers */
+  -moz-column-count: 2; /* Number of columns in Firefox */
+  column-count: 2; /* Standard CSS for number of columns */
+  -webkit-column-gap: 20px; /* Gap between columns in modern browsers */
+  -moz-column-gap: 20px; /* Gap between columns in Firefox */
+  column-gap: 20px; /* Standard CSS for gap between columns */
+  font-size: 13px; /* Font size for text */
+}
+
+.a4 {
+  margin-left: 0; /* Resets any left margin */
+  margin-bottom: 20px; /* Space below each block */
+  width: 100%; /* Ensures element fills its container */
+}
+
+.a4 h4, .b h4, .b p {
+  margin-bottom: 10px; /* Spacing below headings and paragraphs for better readability */
+}
+
+.a4 p {
+  margin-top: -10px; /* Negative margin to reduce space above paragraphs */
+  font-size: 13px; /* Font size for detailed text */
+}
+
+.date {
+  padding-top: 20px; /* Space above the date for separation */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.b {
+  margin-bottom: 20px; /* Space below section for separation */
+}
+
+.b p {
+  margin-top: -10px; /* Negative top margin to reduce space */
+  font-size: 15px; /* Slightly larger font size for emphasis */
+}
+
+.b p:last-child{
+  font-weight: bold;
+  text-align: right;
+}
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column; /* Stacks flex items vertically on small screens */
+  }
+
+  .a3 p {
+    text-align: center; /* Ensures text is centered */
+    max-width: 100%; /* Full width on small screens */
+    margin-left: 20px; /* Left margin for alignment */
+    padding: 0px 10px; /* Padding inside paragraph */
+    padding-bottom: 10px; /* Additional bottom padding */
+    font-size: 13px; /* Consistent font size */
+  }
+
+  .b {
+    -webkit-column-count: 2; /* Number of columns in modern browsers */
+    -moz-column-count: 2; /* Number of columns in Firefox */
+    column-count: 2; /* Standard CSS for number of columns */
+    -webkit-column-gap: 20px; /* Gap between columns in modern browsers */
+    -moz-column-gap: 20px; /* Gap between columns in Firefox */
+    column-gap: 20px; /* Standard CSS for gap between columns */
+    margin-top: 10px; /* Top margin for alignment */
+    padding: 10px; /* Padding around content */
+  }
+
+  .date {
+    padding-top: 10px; /* Reduced top padding on small screens */
+    text-align: left; /* Aligns text to the left */
+  }
+
+  .ah3 h1 {
+    font-size: 30px; /* Smaller font size on small screens */
+    padding-left: 15px; /* Left padding for alignment */
+    margin-top: 10px; /* Top margin for spacing */
+    text-align: center; /* Centers text */
+  }
+
+  .img {
+    height: 700px; /* Fixed height for images */
+    margin-left: 10px; /* Left margin for alignment */
+    margin-bottom: 5px; /* Bottom margin for spacing */
+  }
+}
